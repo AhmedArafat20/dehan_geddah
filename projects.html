@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مشاريعنا | دهانات جده</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-paint-roller"></i></div>
+        <div class="logo-text">
+          <span class="logo-main">دهانات جده</span>
+          <span class="logo-sub">احترافية في كل لون</span>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="projects.html" class="nav-link active">مشاريعنا</a>
+        <a href="services.html" class="nav-link">خدماتنا</a>
+        <a href="about.html" class="nav-link">من نحن</a>
+        <a href="contact.html" class="nav-link">تواصل معنا</a>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="index.html">الرئيسية</a> <i class="fa-solid fa-chevron-left"></i> مشاريعنا</div>
+      <h1>معرض <span class="gradient-text">أعمالنا</span></h1>
+      <!-- <p>أكثر من 37 مشروع متميز في مجال الدهانات الداخلية والخارجية</p> -->
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <!-- <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">الكل</button>
+        <button class="filter-btn" data-filter="interior">داخلي</button>
+        <button class="filter-btn" data-filter="exterior">خارجي</button>
+        <button class="filter-btn" data-filter="commercial">تجاري</button>
+        <button class="filter-btn" data-filter="decor">ديكور فني</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- GALLERY -->
+  <section class="gallery-section section-pad">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Items 1-37 -->
+        <div class="gallery-item" data-category="interior" data-index="1">
+          <div class="gallery-media">
+            <img src="images/1.jpg" alt="مشروع 1" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>1.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(1)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#01</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="2">
+          <div class="gallery-media">
+            <img src="images/2.jpg" alt="مشروع 2" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>2.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(2)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#02</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="3">
+          <div class="gallery-media">
+            <img src="images/3.jpg" alt="مشروع 3" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>3.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(3)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#03</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="4">
+          <div class="gallery-media">
+            <img src="images/4.jpg" alt="مشروع 4" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>4.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(4)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#04</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="5">
+          <div class="gallery-media">
+            <img src="images/5.jpg" alt="مشروع 5" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>5.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(5)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#05</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="6">
+          <div class="gallery-media">
+            <img src="images/6.jpg" alt="مشروع 6" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>6.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(6)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#06</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="7">
+          <div class="gallery-media">
+            <img src="images/7.jpg" alt="مشروع 7" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>7.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(7)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#07</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="8">
+          <div class="gallery-media">
+            <img src="images/8.jpg" alt="مشروع 8" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>8.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(8)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#08</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="9">
+          <div class="gallery-media">
+            <img src="images/9.jpg" alt="مشروع 9" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>9.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(9)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#09</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="10">
+          <div class="gallery-media">
+            <img src="images/10.jpg" alt="مشروع 10" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>10.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(10)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#10</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="11">
+          <div class="gallery-media">
+            <img src="images/11.jpg" alt="مشروع 11" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>11.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(11)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#11</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="12">
+          <div class="gallery-media">
+            <img src="images/12.jpg" alt="مشروع 12" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>12.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(12)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#12</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="13">
+          <div class="gallery-media">
+            <img src="images/13.jpg" alt="مشروع 13" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>13.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(13)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#13</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="14">
+          <div class="gallery-media">
+            <img src="images/14.jpg" alt="مشروع 14" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>14.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(14)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#14</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="15">
+          <div class="gallery-media">
+            <img src="images/15.jpg" alt="مشروع 15" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>15.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(15)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#15</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="16">
+          <div class="gallery-media">
+            <img src="images/16.jpg" alt="مشروع 16" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>16.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(16)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#16</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="17">
+          <div class="gallery-media">
+            <img src="images/17.jpg" alt="مشروع 17" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>17.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(17)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#17</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="18">
+          <div class="gallery-media">
+            <img src="images/18.jpg" alt="مشروع 18" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>18.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(18)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#18</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="19">
+          <div class="gallery-media">
+            <img src="images/19.jpg" alt="مشروع 19" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>19.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(19)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#19</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="20">
+          <div class="gallery-media">
+            <img src="images/20.jpg" alt="مشروع 20" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>20.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(20)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#20</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="21">
+          <div class="gallery-media">
+            <img src="images/21.jpg" alt="مشروع 21" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>21.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(21)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#21</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="22">
+          <div class="gallery-media">
+            <img src="images/22.jpg" alt="مشروع 22" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>22.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(22)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#22</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="23">
+          <div class="gallery-media">
+            <img src="images/23.jpg" alt="مشروع 23" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>23.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(23)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#23</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="24">
+          <div class="gallery-media">
+            <img src="images/24.jpg" alt="مشروع 24" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>24.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(24)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#24</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="25">
+          <div class="gallery-media">
+            <img src="images/25.jpg" alt="مشروع 25" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>25.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(25)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#25</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="commercial" data-index="26">
+          <div class="gallery-media">
+            <img src="images/26.jpg" alt="مشروع 26" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>26.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(26)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">تجاري</span><span class="gallery-num">#26</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="decor" data-index="27">
+          <div class="gallery-media">
+            <img src="images/27.jpg" alt="مشروع 27" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>27.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(27)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">ديكور</span><span class="gallery-num">#27</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="interior" data-index="28">
+          <div class="gallery-media">
+            <img src="images/28.jpg" alt="مشروع 28" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>28.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(28)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">داخلي</span><span class="gallery-num">#28</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior" data-index="29">
+          <div class="gallery-media">
+            <img src="images/29.jpg" alt="مشروع 29" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><i class=\'fa-solid fa-image\'></i><span>29.jpg</span></div>'" />
+            <div class="gallery-overlay">
+              <button class="gallery-zoom" onclick="openLightbox(29)"><i class="fa-solid fa-expand"></i></button>
+              <div class="gallery-info"><span class="gallery-tag">خارجي</span><span class="gallery-num">#29</span></div>
+            </div>
+          </div>
+        </div>
+
+
+<div class="gallery-item" data-category="commercial" data-index="30">
+  <div class="gallery-media">
+    <video src="images/1.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(30)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">تجاري</span>
+        <span class="gallery-num">#30</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="interior" data-index="31">
+  <div class="gallery-media">
+    <video src="images/2.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(31)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">داخلي</span>
+        <span class="gallery-num">#31</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="decor" data-index="32">
+  <div class="gallery-media">
+    <video src="images/3.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(32)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">ديكور</span>
+        <span class="gallery-num">#32</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="exterior" data-index="33">
+  <div class="gallery-media">
+    <video src="images/4.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(33)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">خارجي</span>
+        <span class="gallery-num">#33</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="commercial" data-index="34">
+  <div class="gallery-media">
+    <video src="images/5.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(34)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">تجاري</span>
+        <span class="gallery-num">#34</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="interior" data-index="35">
+  <div class="gallery-media">
+    <video src="images/6.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(35)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">داخلي</span>
+        <span class="gallery-num">#35</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="decor" data-index="36">
+  <div class="gallery-media">
+    <video src="images/7.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(36)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">ديكور</span>
+        <span class="gallery-num">#36</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-item" data-category="exterior" data-index="37">
+  <div class="gallery-media">
+    <video src="images/8.mp4" controls muted playsinline></video>
+    <div class="gallery-overlay">
+      <button class="gallery-zoom" onclick="openLightbox(37)">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+      <div class="gallery-info">
+        <span class="gallery-tag">خارجي</span>
+        <span class="gallery-num">#37</span>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox-prev" onclick="prevImage()"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="lightbox-next" onclick="nextImage()"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="" />
+        <video id="lightboxVideo" controls playsinline style="display:none; max-width:100%; max-height:80vh; border-radius:8px;"></video>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon"><i class="fa-solid fa-paint-roller"></i></div>
+            <div class="logo-text">
+              <span class="logo-main">دهانات جده</span>
+              <span class="logo-sub">احترافية في كل لون</span>
+            </div>
+          </div>
+          <p>متخصصون في أعمال الدهانات الداخلية والخارجية منذ أكثر من 15 عاماً.</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <a href="index.html">الرئيسية</a>
+          <a href="projects.html">مشاريعنا</a>
+          <a href="services.html">خدماتنا</a>
+          <a href="about.html">من نحن</a>
+          <a href="contact.html">تواصل معنا</a>
+        </div>
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <a href="tel:0548165421"><i class="fa-solid fa-phone"></i> 0548165421</a>
+          <a href="https://wa.me/966548165421" target="_blank"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+          <p><i class="fa-solid fa-location-dot"></i> جدة، المملكة العربية السعودية</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 دهانات جده - جميع الحقوق محفوظة</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-btns">
+    <a href="https://wa.me/966548165421" target="_blank" class="float-btn whatsapp-btn" title="واتساب">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="float-tooltip">تواصل عبر واتساب</span>
+    </a>
+    <a href="tel:0548165421" class="float-btn call-btn" title="اتصل بنا">
+      <i class="fa-solid fa-phone"></i>
+      <span class="float-tooltip">اتصل بنا الآن</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
